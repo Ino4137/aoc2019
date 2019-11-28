@@ -1,0 +1,43 @@
+name:                aoc2019
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              welp
+maintainer:          welperooni@gmail.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable aoc2019
+  main-is:             Main.hs
+  build-depends:       base,
+                       recursion,
+                       lens,
+                       split,
+                       raw-strings-qq,
+                       text,
+                       free
+  default-extensions:  ViewPatterns,
+                       LambdaCase,
+                       GeneralizedNewtypeDeriving,
+                       QuasiQuotes,
+                       TemplateHaskell,
+                       GADTs,
+                       DataKinds,
+                       ScopedTypeVariables,
+                       TypeApplications,
+                       KindSignatures,
+                       FlexibleInstances,
+                       TypeFamilies,
+                       TypeOperators,
+                       RankNTypes,
+                       ConstrainedClassMethods,
+                       TupleSections,
+                       OverloadedStrings,
+                       BangPatterns,
+                       ParallelListComp
+  hs-source-dirs:      src
+  -- TODO fix annoying "modules needed for compilation" msg
+  --ghc-options:         -Wissing-home-modules
+  --other-modules:       Ex.E1
+  default-language:    Haskell2010
