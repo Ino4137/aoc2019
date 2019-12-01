@@ -2,7 +2,8 @@ module Main where
 
 import System.Environment (getArgs)
 
-import Inputs
+import Inputs -- dayN
+import TestInputs -- dayNtest
 import Ex.E1
 
 main :: IO ()
