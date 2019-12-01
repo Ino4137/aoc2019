@@ -16,7 +16,8 @@ executable aoc2019
                        split,
                        raw-strings-qq,
                        text,
-                       free
+                       free,
+                       megaparsec
   default-extensions:  ViewPatterns,
                        LambdaCase,
                        GeneralizedNewtypeDeriving,
