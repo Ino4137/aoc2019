@@ -17,7 +17,8 @@ executable aoc2019
                        raw-strings-qq,
                        text,
                        free,
-                       megaparsec
+                       megaparsec,
+                       vector
   default-extensions:  ViewPatterns,
                        LambdaCase,
                        GeneralizedNewtypeDeriving,

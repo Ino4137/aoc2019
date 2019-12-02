@@ -5,6 +5,3 @@ solve1p2 = print . sum
   . map (sum . takeWhile (>= 0) . tail . iterate f . read) . lines
   where
     f = subtract 2 . (`div` 3)
-
-
-
