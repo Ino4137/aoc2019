@@ -4,8 +4,9 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, free, lens, megaparsec, raw-strings-qq
-      , recursion, split, stdenv, text, vector
+  f = { mkDerivation, base, containers, free, lens, megaparsec, mtl
+      , raw-strings-qq, recursion, split, stdenv, text, transformers
+      , vector
       }:
       mkDerivation {
         pname = "aoc2019";
@@ -14,8 +15,8 @@ let
         isLibrary = false;
         isExecutable = true;
         executableHaskellDepends = [
-          base free lens megaparsec raw-strings-qq recursion split text
-          vector
+          base containers free lens megaparsec mtl raw-strings-qq recursion
+          split text transformers vector
         ];
         license = stdenv.lib.licenses.bsd3;
       };

@@ -18,7 +18,10 @@ executable aoc2019
                        text,
                        free,
                        megaparsec,
-                       vector
+                       vector,
+                       containers,
+                       mtl,
+                       transformers
   default-extensions:  ViewPatterns,
                        LambdaCase,
                        GeneralizedNewtypeDeriving,
