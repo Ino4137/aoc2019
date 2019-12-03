@@ -1,14 +1,13 @@
 module Ex.E3 (solve3p1, solve3p2) where
 
-import Data.List.Split
-import qualified Data.Set as S
-import Control.Recursion
-import Data.Function
-import Data.Functor
-import Data.Semigroup
-import Control.Monad.Writer
-import Data.Foldable
+import           Control.Recursion
+import           Data.Foldable
+import           Data.Function
+import           Data.Functor
+import           Data.List.Split
 import qualified Data.Map as M
+import           Data.Semigroup
+import qualified Data.Set as S
 
 data Dir = D Int | L Int | U Int | R Int 
 
@@ -21,9 +20,9 @@ parse = map (map pparser . splitOn ",") . lines
       'R' -> R
       'L' -> L
 
-manhattan (a,b) = abs a + abs b
-
 solve3p1 = print . foldMap (Min . manhattan) . solve3p1'
+  where
+    manhattan (a,b) = abs a + abs b
 
 solve3p1' (parse -> [a, b]) =
   cata walk a (0,0) `S.intersection` cata walk b (0,0)

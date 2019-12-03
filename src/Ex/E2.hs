@@ -1,12 +1,12 @@
 module Ex.E2 (solve2p1, solve2p2) where
 
-import Data.List.Split
-import Control.Lens
-import Control.Monad
+import           Control.Arrow
+import           Control.Lens
+import           Control.Monad
+import           Control.Recursion
+import           Data.List.Split
+import           Data.Vector (Vector, (!))
 import qualified Data.Vector as V
-import Data.Vector (Vector, (!))
-import Control.Recursion
-import Control.Arrow
 
 parse :: String -> Vector Int
 parse = V.fromList . map read . splitOn ","
